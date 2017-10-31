@@ -1,0 +1,99 @@
+<div class="container">
+<h1>Become a wolf</h1>
+
+<form *ngIf="active"
+      (ngSubmit)="onSubmit()"
+       class="form-horizontal ">
+  <fieldset>
+    
+
+
+  <legend>Inscription Wolfsound</legend>
+      <div class="row">
+       
+    <div class="form-group col s6">
+      <label for="inputEmail" class="col-lg-2 control-label">Nom</label>
+      <div class="col-lg-10">
+        <input  name="name" [(ngModel)]="wolf.name"
+        type="text" class="form-control" id="nom" placeholder="Nom"/>
+      </div>
+    </div>
+    <div class="form-group col s6">
+      <label for="inputEmail" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input  name="password" [(ngModel)]="wolf.password"
+        type="text" class="form-control" id="password" placeholder="password"/>
+      </div>
+    </div>
+    <!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+<input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+      Add sound
+</button>
+    </div>
+ 
+
+      
+     <div class="form-group col s12">
+      <label for="inputEmail" class="col-lg-2 control-label">Infos</label>
+      <div class="col-lg-10">
+        <input  name="name" [(ngModel)]="wolf.infos"
+        type="text" class="form-control" id="nom" placeholder="Infos"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Cover</label>
+      <div class="col-lg-10">
+        <input  name="photo" [(ngModel)]="wolf.cover"
+        type="text" class="form-control" id="photo" placeholder="Cover"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Profile picture</label>
+      <div class="col-lg-10">
+        <input  name="photo" [(ngModel)]="wolf.profilePic"
+        type="text" class="form-control" id="photo" placeholder="Profile picture"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">/!\MDP</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="wolf.description"
+        type="text" class="form-control" id="description" placeholder="Description"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Age</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="wolf.age"
+        type="number" class="form-control" id="age" placeholder="Age"/>
+      </div>
+    </div>
+     <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Gigs</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="wolf.gigs"
+        type="text" class="form-control" id="age" placeholder="Gigs"/>
+
+      </div>
+    </div>
+     <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Sound</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="wolf.sounds"
+        type="text" class="form-control" id="age" placeholder="embed your soundcloud sound"/>
+
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default black">Cancel</button>
+        <button type="submit" (click)="savewolf()" class="btn btn-primary black">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
+

@@ -1,0 +1,22 @@
+<div class="container">
+  <h3>Wolfs</h3>
+
+  <div class="row">
+    <div *ngFor="let wolf of wolf" class="col s12 m4">
+      <div class="card z-depth-5">
+        <div class="card-image">
+          <img src="http://materializecss.com/images/sample-1.jpg">
+          <span class="card-title">Name : {{wolf.name}}</span>
+          <a [routerLink]="['/wolf', wolf._id]"  class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>Description : {{wolf.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+     
+
+    
+
+</div>

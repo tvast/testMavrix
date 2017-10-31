@@ -1,0 +1,30 @@
+<p>
+  image-list works!
+</p>
+
+<div *ngFor="let image of image" class="col s12 m4">
+
+</div>
+<div *ngFor="let image of image" class="col s12 m4" class="container" >
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+     <img src="https://fileuploader2702.herokuapp.com/images/{{image.$loki}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">{{image.originalname}}</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>
+	{{image.encoding}}
+	{{image.mimetype}}
+	{{image.filename}}</p>
+    </div>
+  </div>
+  </div>
+
+
+<!-- {{}}
+{{}}
+{{}} -->

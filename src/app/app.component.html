@@ -1,0 +1,51 @@
+<!-- app component with FAB -->
+
+         <div class="fixed-action-btn horizontal click-to-toggle spin-close">
+    <a class="btn-floating btn-large grey">
+      <i class="material-icons">edit</i>
+    </a>
+    <ul>
+      <li><a routerLink="/add" class="btn-floating  teal darken-4"><i class="large material-icons">present_to_all</i></a></li>
+      <li><a routerLink="/image" class="btn-floating cyan darken-4"><i class="large material-icons">perm_identity</i></a></li>
+      <li><a routerLink="/list" class="btn-floating #01579b light-blue darken-4"><i class="material-icons">library_music</i></a></li>
+      <li><a routerLink="/home" class="btn-floating purple darken-4"><i class="material-icons">home</i></a></li>
+      <li><a routerLink="/home" class="btn-floating purple darken-4"><i class="material-icons">login</i></a></li>
+    </ul>
+  </div>
+
+<nav class="white #212121 grey darken-4" role="navigation">
+  <div class="nav-wrapper  container">
+    <div>
+      <a style="color :white;" data-text="POSHKA" id="logo-container" href="#" class="brand-logo center">
+        <!-- TROCART<sup>(beta)</sup> -->
+       POSHKA<sup>(beta)</sup>
+      </a>
+    </div>
+</div>
+</nav>
+<router-outlet></router-outlet>
+ <footer class="#000000 black page-footer teal">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">What's POSHKA ?</h5>
+        <p class="grey-text text-lighten-4">
+         online collaborative galerie
+       </p>
+     </div>
+     <div class="col l3 s12">
+      <h5 class="white-text">Menu</h5>
+      <ul>
+        <li><a class="white-text" routerLink="/home">Home</a></li>
+        <li><a class="white-text" routerLink="/add">Login</a></li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+    Made with  <i class="material-icons">loyalty</i> by <a class="brown-text text-lighten-3" href="mailto:(theophile.vast@gmail.com">Théophile Vast</a>
+  </div>
+</div>
+</footer>

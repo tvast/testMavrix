@@ -1,0 +1,20 @@
+{
+  "name": "node-api",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tvast/trocart.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Théophile Vast",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "cors": "^2.8.1",
+    "express": "~4.0.0",
+    "mongoose": "^4.6.5",
+    "morgan": "~1.0.0"
+  }
+}

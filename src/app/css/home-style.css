@@ -1,0 +1,11 @@
+.head {
+  background: url("app/img/background1.jpg");
+}
+
+.middle {
+  background: url("app/img/background2.jpg");
+}
+
+.end {
+  background: url("app/img/background3.jpg");
+}
