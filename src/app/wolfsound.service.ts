@@ -86,23 +86,27 @@ export class WolfsoundService {
 		.map((res: Response) => res.json());
 	}
 
-	// updateBear(id: string) : Observable<Bear> {
-	// 	// End point for list of pets:
-	// 	// http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
-	// 	const endPoint = 'get'
-	// 	// URLSearchParams makes it easier to set query parameters and construct URL
-	// 	// rather than manually concatinatng
-	// 	let params = new URLSearchParams();
-	// 	// params.set('key', '555f8155d42d5c9be4705beaf4cce089');
-	// 	params.set('id', id);
-	// 	// params.set('format', 'json');
-	// 	// params.set('callback', 'JSONP_CALLBACK');
-	// 	console.log(id);
-	// 	// Return response
-	// 	return this.http
-	// 	.delete(this.bearUrl+'/'+id)
-	// 	.map((res: Response) => res.json());
-	// }
+	updateWolf(id: string, body: Object) : Observable<Wolf> {
+		// End point for list of pets:
+		// http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
+		let bodyString = JSON.stringify(body); // Stringify payload
+		let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+		let options = new RequestOptions({ headers: headers }); // Create a request option
+		const endPoint = 'get'
+		// URLSearchParams makes it easier to set query parameters and construct URL
+		// rather than manually concatinatng
+		let params = new URLSearchParams();
+		// params.set('key', '555f8155d42d5c9be4705beaf4cce089');
+		params.set('id', id);
+		// params.set('format', 'json');
+		// params.set('callback', 'JSONP_CALLBACK');
+		console.log(id);
+		// Return response
+		return this.http
+		.put(this.wolfUrl+'/'+id , body, options) // ...using post request
+		.map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+		.catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+	}
 
 
 }

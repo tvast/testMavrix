@@ -18,6 +18,7 @@ import { FormComponent } from './form/form.component';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { ImageListComponent } from './image-list/image-list.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
 
@@ -49,6 +50,9 @@ import { ImageListComponent } from './image-list/image-list.component';
       },
       { 
         path: 'image', component: ImageListComponent 
+      },
+      { 
+        path: 'update', component: UpdateComponent
       } 
     ])
   ],
@@ -58,7 +62,7 @@ import { ImageListComponent } from './image-list/image-list.component';
     WolfsoundHomeComponent,
     FormComponent,
     FileSelectDirective, 
-    FileDropDirective, DetailViewComponent, ImageListComponent,
+    FileDropDirective, DetailViewComponent, ImageListComponent, UpdateComponent,
   ],
   providers: [WolfsoundService, ImageService],
   bootstrap: [AppComponent],

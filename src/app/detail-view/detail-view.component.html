@@ -1,32 +1,20 @@
 <div *ngIf="wolf" class="wrapper ">
-	<h1>{{wolf.name}}</h1>
-	<br>
-	<div>
-		<i class="material-icons large">library_music</i>
-	</div>
-	
-	
-</div>
-<a (click)="destroy()" class="waves-effect waves-light btn black">destroy</a>
 
-<!-- <div class=" background">
-<div class="row" >
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <img src="http://materializecss.com/images/sample-1.jpg">
-          <span class="card-title">{{wolf.name}}</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-        </div>
-        <div class="card-content">
-          <p><label>Id: </label>{{wolf._id}}<br> 
-        <label>Age: </label>{{wolf.age}}<br>
-        <label>Description: </label>{{wolf.description}}<br>
-        <label>Description: </label>{{wolf.infos}}<br>
-        <label>password </label>{{wolf.password}}<br></p>
-        
+
+    <div>
+        <div class="col s12 m6">
+          <div class="card white darken-1">
+            <div class="card-content dark-text">
+              <span class="card-title">{{wolf.firstName}} {{wolf.lastName}} </span>
+              <p>{{wolf.email}}</p><p> {{wolf.country}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#"><i class="material-icons">call</i></a>
+              <a href="#"><i class="material-icons">clear</i></a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div> -->
+  
+  
+</div>

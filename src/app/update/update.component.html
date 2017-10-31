@@ -1,3 +1,7 @@
+<p>
+  update works!
+</p>
+
 <div class="container">
 <h1>Add a friend</h1>
 
@@ -8,21 +12,21 @@
     
 
 
-  <legend>Add a friend</legend>
+  <legend>update a friend</legend>
       <div class="row">
        
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">First name</label>
       <div class="col-lg-10">
-        <input required minlength="4" forbiddenName="bob" name="name" [(ngModel)]="wolf.firstName"
-        type="text" class="form-control" id="name" placeholder="Nom"/>
+        <input  name="name" [(ngModel)]="wolf.firstName"
+        type="text" class="form-control" id="nom" placeholder="Nom"/>
       </div>
     </div>
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Last name</label>
       <div class="col-lg-10">
-        <input name="name" class="form-control" required minlength="4" forbiddenName="bob"  name="password" [(ngModel)]="wolf.lastName "
-        type="text" class="form-control" id="name" placeholder="name"/>
+        <input  name="password" [(ngModel)]="wolf.lastName "
+        type="text" class="form-control" id="password" placeholder="password"/>
       </div>
     </div>
     </div>
@@ -30,35 +34,26 @@
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
-        <input required minlength="4" forbiddenName="bob" name="name" [(ngModel)]="wolf.email"
-        type="text" class="form-control" id="name" placeholder="Infos"/>
+        <input  name="name" [(ngModel)]="wolf.email"
+        type="text" class="form-control" id="nom" placeholder="Infos"/>
       </div>
     </div>
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Country</label>
       <div class="col-lg-10">
-        <input required minlength="4" forbiddenName="bob" name="photo" [(ngModel)]="wolf.country"
-        type="text" class="form-control" id="name" placeholder="Cover"/>
+        <input  name="photo" [(ngModel)]="wolf.country"
+        type="text" class="form-control" id="photo" placeholder="Cover"/>
       </div>
     </div>
-  </div>
-
-    <div *ngIf="name.errors.required">
-    Name is required.
-  </div>
-  <div *ngIf="name.errors.minlength">
-    Name must be at least 4 characters long.
-  </div>
-  <div *ngIf="name.errors.forbiddenName">
-    Name cannot be Bob.
   </div>
     <div class="form-group col s12 center">
       <div class="col-lg-10 col-lg-offset-2">
     <!--     <button type="reset" class="btn btn-default black">Cancel</button> -->
-        <button type="submit" (click)="savewolf()" class="btn btn-primary black">Submit</button>
+        <button type="submit" (click)="updatewolf()" class="btn btn-primary black">Submit</button>
       </div>
     </div>
   </fieldset>
 </form>
 </div>
+
 

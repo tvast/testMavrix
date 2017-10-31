@@ -1,22 +1,44 @@
 <div class="container">
-  <h3>Wolfs</h3>
+  <h3>Contact</h3>
 
-  <div class="row">
-    <div *ngFor="let wolf of wolf" class="col s12 m4">
-      <div class="card z-depth-5">
-        <div class="card-image">
-          <img src="http://materializecss.com/images/sample-1.jpg">
-          <span class="card-title">Name : {{wolf.firstName}}</span>
-          <a [routerLink]="['/wolf', wolf._id]"  class="btn-floating halfway-fab waves-effect waves-light black"><i class="material-icons">add</i></a>
-        </div>
-        <div class="card-content">
-          <p>Description : {{wolf.lastName}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-     
-
-    
-
+<div *ngFor="let wolf of wolf" class="">
+  <!-- <div class="chip">
+    <img src="http://materializecss.com/images/sample-1.jpg" alt="Contact Person">
+   {{wolf.firstName}} {{wolf.lastName}} 
+   <a [routerLink]="['/wolf', wolf._id]"  class="btn-floating waves-effect waves-light black"><i class="material-icons">add</i></a>
+   <a (click)="destroy()" class="btn-floating waves-effect waves-light red"><i class="material-icons">clear</i></a>
+  </div> -->
+  <ul class="collection">
+      	<li class="collection-item"><div class="chip">
+		    <img src="http://materializecss.com/images/sample-1.jpg" alt="Contact Person">
+		   {{wolf.firstName}} {{wolf.lastName}} 
+		   
+		  </div>
+		  <span class="badge">
+		  	<a [routerLink]="['/wolf', wolf._id]"  class="btn-floating waves-effect waves-light black">
+		  		<i class="material-icons">add</i>
+		  	</a>
+		   <a (click)="destroy()" class="btn-floating waves-effect waves-light red">
+		   	<i class="material-icons">clear</i>
+		   </a>
+		   <a (click)="update()" [routerLink]="['/update', wolf._id]" class="btn-floating waves-effect waves-light green">
+		   	<i class="material-icons">create</i>
+		   </a>
+		</span>
+		  
+		</li>
+    </ul>
 </div>
+  
+</div>
+
+    <!-- <ul class="collection">
+      	<li class="collection-item"><div class="chip">
+		    <img src="http://materializecss.com/images/sample-1.jpg" alt="Contact Person">
+		   {{wolf.firstName}} {{wolf.lastName}} 
+		   
+		  </div>
+		  <a [routerLink]="['/wolf', wolf._id]"  class="btn-floating waves-effect waves-light black"><i class="material-icons">add</i></a>
+		   <a (click)="destroy()" class="btn-floating waves-effect waves-light red"><i class="material-icons">clear</i></a>
+		</li>
+    </ul> -->
