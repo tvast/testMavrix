@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Contact</h3>
 
-<div *ngFor="let wolf of wolf" class="">
+<div *ngFor="let contact of contact" class="">
   <!-- <div class="chip">
     <img src="http://materializecss.com/images/sample-1.jpg" alt="Contact Person">
    {{wolf.firstName}} {{wolf.lastName}} 
@@ -11,11 +11,11 @@
   <ul class="collection">
       	<li class="collection-item"><div class="chip">
 		    <img src="http://materializecss.com/images/sample-1.jpg" alt="Contact Person">
-		   {{wolf.firstName}} {{wolf.lastName}} 
+		   {{contact.firstName}} {{contact.lastName}} 
 		   
 		  </div>
 		  <span class="badge">
-		  	<a [routerLink]="['/wolf', wolf._id]"  class="btn-floating waves-effect waves-light black">
+		  	<a [routerLink]="['/wolf', contact._id]"  class="btn-floating waves-effect waves-light black">
 		  		<i class="material-icons">add</i>
 		  	</a>
 		   

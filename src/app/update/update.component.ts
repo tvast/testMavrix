@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WolfsoundService } from './../wolfsound.service';
 import { Router }            from '@angular/router';
 import {Observable} from 'rxjs/Rx';
-import { Wolf} from './../wolf';
+import { Contact} from './../contact';
 import { FileUploader, FileUploadModule } from 'ng2-file-upload';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
 
@@ -17,9 +17,9 @@ const URL = 'https://fileuploader2702.herokuapp.com/profile';
 })
 export class UpdateComponent implements OnInit {
 
-  wolfs: Wolf[] = [];
+  contacts: Contact[] = [];
   active = true;
-  wolf = new Wolf();
+  contact = new Contact();
   submitted = false;
   _loki ={id:String};
   id: any;

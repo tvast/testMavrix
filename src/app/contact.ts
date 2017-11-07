@@ -1,4 +1,4 @@
-export class Wolf {
+export class Contact {
 	id : any;
 	firstName : string;
 	lastName : string;

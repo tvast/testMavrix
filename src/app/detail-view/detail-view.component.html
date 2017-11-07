@@ -1,20 +1,18 @@
-<div *ngIf="wolf" class="wrapper ">
+<div *ngIf="contact" class="wrapper ">
 
 
     <div>
         <div class="col s12 m6">
           <div class="card white darken-1">
             <div class="card-content dark-text">
-              <span class="card-title">{{wolf.firstName}} {{wolf.lastName}} </span>
-              <p>{{wolf.email}}</p><p> {{wolf.country}}</p>
+              <span class="card-title">{{contact.firstName}} {{contact.lastName}} </span>
+              <p>{{contact.email}}</p><p> {{contact.country}}</p>
             </div>
             <div class="card-action">
-              <a href="#"><i class="material-icons">call</i></a>
-              <a href="#"><i class="material-icons">clear</i></a>
                <a (click)="destroy()" class="btn-floating waves-effect waves-light red">
         <i class="material-icons">clear</i>
        </a>
-       <a (click)="update()" [routerLink]="['/update', wolf._id]" class="btn-floating waves-effect waves-light green">
+       <a (click)="update()" [routerLink]="['/update', contact._id]" class="btn-floating waves-effect waves-light green">
         <i class="material-icons">create</i>
        </a>
             </div>

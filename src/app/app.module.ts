@@ -9,16 +9,15 @@ import {HttpModule} from '@angular/http';
 // import {CdkTableModule} from '@angular/cdk';
 
 import { WolfsoundService } from './wolfsound.service';
-import { ImageService } from './image.service';
 import { WolfsoundListComponent } from './wolfsound-list/wolfsound-list.component';
 import { RouterModule }   from '@angular/router';
-import { WolfsoundHomeComponent } from './wolfsound-home/wolfsound-home.component';
+
 import { FormComponent } from './form/form.component';
 
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { DetailViewComponent } from './detail-view/detail-view.component';
-import { ImageListComponent } from './image-list/image-list.component';
 import { UpdateComponent } from './update/update.component';
+
 
 @NgModule({
 
@@ -28,7 +27,7 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
- RouterModule.forRoot([
+    RouterModule.forRoot([
       {
         path: '',
         component: WolfsoundListComponent
@@ -37,10 +36,7 @@ import { UpdateComponent } from './update/update.component';
         path: 'list',
         component: WolfsoundListComponent
       },
-      {
-        path: 'home',
-        component:  WolfsoundHomeComponent
-      },
+     
       {
         path: 'add',
         component:  FormComponent
@@ -48,9 +44,7 @@ import { UpdateComponent } from './update/update.component';
       { 
         path: 'wolf/:id', component: DetailViewComponent 
       },
-      { 
-        path: 'image', component: ImageListComponent 
-      },
+      
       { 
         path: 'update', component: UpdateComponent
       } 
@@ -59,12 +53,12 @@ import { UpdateComponent } from './update/update.component';
   declarations: [
     AppComponent,
     WolfsoundListComponent,
-    WolfsoundHomeComponent,
+    
     FormComponent,
     FileSelectDirective, 
-    FileDropDirective, DetailViewComponent, ImageListComponent, UpdateComponent,
+    FileDropDirective, DetailViewComponent, UpdateComponent,
   ],
-  providers: [WolfsoundService, ImageService],
+  providers: [WolfsoundService],
   bootstrap: [AppComponent],
 })
 

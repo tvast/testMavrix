@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
 import {Observable} from 'rxjs/Rx';
-import { Wolf} from './wolf';
+import { Contact} from './contact';
 
 @Injectable()
 export class WolfsoundService {
@@ -24,12 +24,12 @@ export class WolfsoundService {
 	getBears() {
 		// return Observable<Check[]>
 		return this.http.get(this.wolfUrl)
-		.map(response => <Wolf[]> response.json())
+		.map(response => <Contact[]> response.json())
 		// .catch(this.handleError)
 		;
 	}  
 
-	getAllBears() : Observable<Wolf[]>{
+	getAllBears() : Observable<Contact[]>{
 		// ...using get request
 		return this.http.get(this.wolfUrl)
 		// ...and calling .json() on the response to return data
@@ -40,7 +40,7 @@ export class WolfsoundService {
 	}
 
 	// // Add a new comment
-	addWolf (body: Object): Observable<Wolf[]> {
+	addWolf (body: Object): Observable<Contact[]> {
 		let bodyString = JSON.stringify(body); // Stringify payload
 		let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
 		let options = new RequestOptions({ headers: headers }); // Create a request option
@@ -50,7 +50,7 @@ export class WolfsoundService {
 		.catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
 	}
 
-	findwolfById(id: string) : Observable<Wolf> {
+	findwolfById(id: string) : Observable<Contact> {
 		// End point for list of pets:
 		// http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
 		const endPoint = 'get'
@@ -68,7 +68,7 @@ export class WolfsoundService {
 		.map((res: Response) => res.json());
 	}
 
-	deleteWolf(id: string) : Observable<Wolf> {
+	deleteWolf(id: string) : Observable<Contact> {
 		// End point for list of pets:
 		// http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
 		const endPoint = 'get'
@@ -86,7 +86,7 @@ export class WolfsoundService {
 		.map((res: Response) => res.json());
 	}
 
-	updateWolf(id: string, body: Object) : Observable<Wolf> {
+	updateWolf(id: string, body: Object) : Observable<Contact> {
 		// End point for list of pets:
 		// http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
 		let bodyString = JSON.stringify(body); // Stringify payload

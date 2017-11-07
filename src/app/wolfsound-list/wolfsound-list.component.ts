@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
 import { WolfsoundService } from './../wolfsound.service';
-import { Wolf} from './../wolf';
+import { Contact} from './../contact';
 
 @Component({
 	selector: 'app-wolfsound-list',
@@ -11,7 +11,7 @@ import { Wolf} from './../wolf';
 })
 export class WolfsoundListComponent implements OnInit {
 
-	wolf: Wolf[] = [];
+	contact: Contact[] = [];
 
 	constructor(
 		private router: Router,
@@ -19,11 +19,11 @@ export class WolfsoundListComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.wolfService.getAllBears().subscribe(wolf => this.wolf = wolf);
+		this.wolfService.getAllBears().subscribe(contact => this.contact = contact);
 		
 	}
 
-	gotoDetail(wolf: Wolf): void {
+	gotoDetail(wolf: Contact): void {
 		let link = ['/beardetail', wolf.id];
 		this.router.navigate(link);
 	}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { Wolf }        from './../wolf';
+import { Contact }        from './../contact';
 import { WolfsoundService } from './../wolfsound.service';
 import {Injectable, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -17,7 +17,7 @@ import { Router }            from '@angular/router';
 export class DetailViewComponent implements OnInit {
 
 	 private sub:any;
-  private wolf: Wolf;
+  private contact: Contact;
   private router: Router;
   $:any;
 
@@ -40,17 +40,17 @@ export class DetailViewComponent implements OnInit {
       this.sub = this.route.params.subscribe(params => {
         let id = params['id'];
        // Retrieve Pet with Id route param
-       this.wolfService.findwolfById(id).subscribe(wolf => this.wolf = wolf);
+       this.wolfService.findwolfById(id).subscribe(contact => this.contact = contact);
        console.log(id)
-       console.log(this.wolf)
+       console.log(this.contact)
      });
     }  
 
-    destroy (wolf:Wolf) {
+    destroy (contact:Contact) {
       this.sub = this.route.params.subscribe(params => {
         let id = params['id'];
        // Retrieve Pet with Id route param
-       this.wolfService.deleteWolf(id).subscribe(wolf => this.wolf = wolf);
+       this.wolfService.deleteWolf(id).subscribe(contact => this.contact = contact);
      });
       // this.location.back();
       let link = ['/wolf'];
@@ -58,7 +58,7 @@ export class DetailViewComponent implements OnInit {
 
     }
 
-    gotoDetail(wolf: Wolf): void {
+    gotoDetail(contact: Contact): void {
       let link = ['/form'];
       this.router.navigate(link);
     }
