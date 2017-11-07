@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WolfsoundService } from './../wolfsound.service';
+import { WolfsoundService } from './../contact.service';
 import { Router }            from '@angular/router';
 import {Observable} from 'rxjs/Rx';
 import { Contact} from './../contact';

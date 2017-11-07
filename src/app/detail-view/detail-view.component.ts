@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { Contact }        from './../contact';
-import { WolfsoundService } from './../wolfsound.service';
+import { WolfsoundService } from './../contact.service';
 import {Injectable, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
@@ -41,8 +41,6 @@ export class DetailViewComponent implements OnInit {
         let id = params['id'];
        // Retrieve Pet with Id route param
        this.wolfService.findwolfById(id).subscribe(contact => this.contact = contact);
-       console.log(id)
-       console.log(this.contact)
      });
     }  
 
@@ -53,8 +51,7 @@ export class DetailViewComponent implements OnInit {
        this.wolfService.deleteWolf(id).subscribe(contact => this.contact = contact);
      });
       // this.location.back();
-      let link = ['/wolf'];
-    this.router.navigate(link);
+     this.location.back();
 
     }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { WolfsoundService } from './../wolfsound.service';
+import { WolfsoundService } from './../contact.service';
 import { Contact} from './../contact';
 
 @Component({

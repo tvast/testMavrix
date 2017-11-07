@@ -1,9 +1,9 @@
-<p>
-  update works!
-</p>
 
 <div class="container">
-<h1>Add a friend</h1>
+<p>update TODO</p>  
+</div>
+<div class="container">
+<h1>Update a friend</h1>
 
 <form *ngIf="active"
       (ngSubmit)="onSubmit()"
@@ -12,21 +12,21 @@
     
 
 
-  <legend>update a friend</legend>
+  <legend>Update a friend</legend>
       <div class="row">
        
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">First name</label>
       <div class="col-lg-10">
-        <input  name="name" [(ngModel)]="wolf.firstName"
-        type="text" class="form-control" id="nom" placeholder="Nom"/>
+        <input required minlength="4" forbiddenName="bob" name="name" [(ngModel)]="contact.firstName"
+        type="text" class="form-control" id="name" placeholder="Nom"/>
       </div>
     </div>
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Last name</label>
       <div class="col-lg-10">
-        <input  name="password" [(ngModel)]="wolf.lastName "
-        type="text" class="form-control" id="password" placeholder="password"/>
+        <input name="name" class="form-control" required minlength="4" forbiddenName="bob"  name="password" [(ngModel)]="contact.lastName "
+        type="text" class="form-control" id="name" placeholder="name"/>
       </div>
     </div>
     </div>
@@ -34,26 +34,25 @@
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
-        <input  name="name" [(ngModel)]="wolf.email"
-        type="text" class="form-control" id="nom" placeholder="Infos"/>
+        <input required minlength="4" forbiddenName="bob" name="name" [(ngModel)]="contact.email"
+        type="text" class="form-control" id="name" placeholder="Infos"/>
       </div>
     </div>
     <div class="form-group col s6">
       <label for="inputEmail" class="col-lg-2 control-label">Country</label>
       <div class="col-lg-10">
-        <input  name="photo" [(ngModel)]="wolf.country"
-        type="text" class="form-control" id="photo" placeholder="Cover"/>
+        <input required minlength="4" forbiddenName="bob" name="photo" [(ngModel)]="contact.country"
+        type="text" class="form-control" id="name" placeholder="Cover"/>
+        <!-- You can now use your angular2-countrypicker -->
       </div>
     </div>
   </div>
     <div class="form-group col s12 center">
       <div class="col-lg-10 col-lg-offset-2">
     <!--     <button type="reset" class="btn btn-default black">Cancel</button> -->
-        <button type="submit" (click)="updatewolf()" class="btn btn-primary black">Submit</button>
+        <button type="submit" (click)="updateContact()" class="btn btn-primary black">Submit</button>
       </div>
     </div>
   </fieldset>
 </form>
 </div>
-
-

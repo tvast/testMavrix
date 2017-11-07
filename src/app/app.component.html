@@ -1,28 +1,22 @@
-<!-- app component with FAB -->
-
-         <div class="fixed-action-btn horizontal click-to-toggle spin-close">
-    <a class="btn-floating btn-large grey">
-      <i class="material-icons">edit</i>
-    </a>
-    <ul>
-      <li><a routerLink="/add" class="btn-floating  teal darken-4"><i class="large material-icons">present_to_all</i></a></li>
-      <li><a routerLink="/image" class="btn-floating cyan darken-4"><i class="large material-icons">perm_identity</i></a></li>
-      <li><a routerLink="/list" class="btn-floating #01579b light-blue darken-4"><i class="material-icons">library_music</i></a></li>
-      <li><a routerLink="/home" class="btn-floating purple darken-4"><i class="material-icons">home</i></a></li>
-      <li><a routerLink="/home" class="btn-floating purple darken-4"><i class="material-icons">login</i></a></li>
-    </ul>
-  </div>
-
-<nav class="white #212121 grey darken-4" role="navigation">
-  <div class="nav-wrapper  container">
-    <div>
-      <a style="color :white;" data-text="ca" id="logo-container" href="#" class="brand-logo center">
+  <nav class="white #212121 grey darken-4" role="navigation">
+    <div class="nav-wrapper container">
+       <a style="color :white;" data-text="ca" id="logo-container" href="#" class="brand-logo center">
         <!-- TROCART<sup>(beta)</sup> -->
        contact<sup>(beta)</sup>
       </a>
+      <a href="#" materialize="sideNav" data-activates="mobile-demo" class="button-collapse red-text">
+  <i class="material-icons">menu</i>
+</a>
+      <ul class="right hide-on-med-and-down">
+       <li><a routerLink="/add" class="btn red">Add contact</a></li>
+      <li><a routerLink="/list" class="btn red">View contacts</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a routerLink="/add" class="btn red">Add contact</a></li>
+      <li><a routerLink="/list" class="btn red">View contacts</a></li>
+      </ul>
     </div>
-</div>
-</nav>
+  </nav>
 <router-outlet></router-outlet>
  <footer class="#000000 black page-footer teal">
   <div class="container">

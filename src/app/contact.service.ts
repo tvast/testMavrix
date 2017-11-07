@@ -61,7 +61,6 @@ export class WolfsoundService {
 		params.set('id', id);
 		// params.set('format', 'json');
 		// params.set('callback', 'JSONP_CALLBACK');
-		console.log(id);
 		// Return response
 		return this.http
 		.get(this.wolfUrl+'/'+id)
@@ -79,7 +78,6 @@ export class WolfsoundService {
 		params.set('id', id);
 		// params.set('format', 'json');
 		// params.set('callback', 'JSONP_CALLBACK');
-		console.log(id);
 		// Return response
 		return this.http
 		.delete(this.wolfUrl+'/'+id)
@@ -100,7 +98,6 @@ export class WolfsoundService {
 		params.set('id', id);
 		// params.set('format', 'json');
 		// params.set('callback', 'JSONP_CALLBACK');
-		console.log(id);
 		// Return response
 		return this.http
 		.put(this.wolfUrl+'/'+id , body, options) // ...using post request

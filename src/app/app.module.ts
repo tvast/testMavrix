@@ -6,17 +6,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-// import {CdkTableModule} from '@angular/cdk';
 
-import { WolfsoundService } from './wolfsound.service';
+import { WolfsoundService } from './contact.service';
 import { WolfsoundListComponent } from './wolfsound-list/wolfsound-list.component';
 import { RouterModule }   from '@angular/router';
-
 import { FormComponent } from './form/form.component';
-
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { UpdateComponent } from './update/update.component';
+import { MaterializeModule } from "angular2-materialize";
 
 
 @NgModule({
@@ -27,6 +24,7 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    MaterializeModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -53,10 +51,9 @@ import { UpdateComponent } from './update/update.component';
   declarations: [
     AppComponent,
     WolfsoundListComponent,
-    
     FormComponent,
-    FileSelectDirective, 
-    FileDropDirective, DetailViewComponent, UpdateComponent,
+    DetailViewComponent, 
+    UpdateComponent,
   ],
   providers: [WolfsoundService],
   bootstrap: [AppComponent],
